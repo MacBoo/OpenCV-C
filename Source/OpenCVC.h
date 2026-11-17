@@ -10,7 +10,7 @@
 #define OPENCVC_H
 
 #include <ctype.h>
-#include <stdbool.h>
+
 #include <stdfloat.h>
 #include "CVCTypes.h"
 #include "CVCBase.h"
@@ -20,6 +20,8 @@
 #include "CVCObjectDetect.h"
 #include "CVCPhoto.h"
 #include "CVCStitching.h"
+
+typedef double float64_t;
 
 // high gui functions
 CVC_EXPORT void CVCdestroyAllWindows(void);
