@@ -21,7 +21,7 @@ jobs:
 
     - name: Projekt kompilieren (64-Bit)
       run: |
-        msbuild OpenCVC.sln /p:Configuration=Release /p:Platform=Win64
+        msbuild OpenCVC.sln /p:Configuration=Release /p:Platform=x64
 
     - name: Fertige Dateien speichern
       uses: actions/upload-artifact@v4
