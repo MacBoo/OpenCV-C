@@ -17,7 +17,7 @@ jobs:
 
     - name: NuGet-Pakete wiederherstellen
       run: |
-        nuget restore OpenCVC.sln.sln
+        nuget restore OpenCVC.sln
 
     - name: Projekt kompilieren (64-Bit)
       run: |
