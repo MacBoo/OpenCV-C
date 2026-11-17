@@ -1,1 +1,30 @@
 
+name: Online Build (Extra Options)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Code auschecken
+      uses: actions/checkout@v4
+
+    - name: MSBuild vorbereiten
+      uses: microsoft/setup-msbuild@v2
+
+    - name: NuGet-Pakete wiederherstellen
+      run: |
+        nuget restore OpenCVC.sln.sln
+
+    - name: Projekt kompilieren (64-Bit)
+      run: |
+        msbuild OpenCVC.sln /p:Configuration=Release /p:Platform=Win64
+
+    - name: Fertige Dateien speichern
+      uses: actions/upload-artifact@v4
+      with:
+        name: NFSMW-ExtraOptions-Release
+        path: D:/a/NFSMWExOpts/NFSMWExOpts/NFSMWExtraOptions/Release/NFSMWExtraOptions/scripts/NFSMWExtraOptions.asi    
