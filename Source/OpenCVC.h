@@ -11,7 +11,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdfloat.h>
 #include "CVCTypes.h"
 #include "CVCBase.h"
 #include "CVCCore.h"
