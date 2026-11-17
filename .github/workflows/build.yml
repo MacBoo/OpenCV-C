@@ -26,5 +26,5 @@ jobs:
     - name: Fertige Dateien speichern
       uses: actions/upload-artifact@v4
       with:
-        name: NFSMW-ExtraOptions-Release
-        path: D:/a/NFSMWExOpts/NFSMWExOpts/NFSMWExtraOptions/Release/NFSMWExtraOptions/scripts/NFSMWExtraOptions.asi    
+        name: OpenCV-C-Release
+        path: D:/a/OpenCV-C/OpenCV-C/x64/Release
