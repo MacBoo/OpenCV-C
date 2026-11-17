@@ -10,8 +10,8 @@
 #define OPENCVC_H
 
 #include <ctype.h>
-
-#include <stdfloat.h>
+#include <stdbool.h>
+#include <limits>
 #include "CVCTypes.h"
 #include "CVCBase.h"
 #include "CVCCore.h"
@@ -21,7 +21,10 @@
 #include "CVCPhoto.h"
 #include "CVCStitching.h"
 
-typedef double float64_t;
+using float64_t = double;
+
+static_assert(sizeof(float64_t) == 8, "float64_t muss 64 Bit groß sein");
+static_assert(std::numeric_limits<float64_t>::is_iec559, "float64_t muss dem IEEE-754 Standard entsprechen");
 
 // high gui functions
 CVC_EXPORT void CVCdestroyAllWindows(void);
