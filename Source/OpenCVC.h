@@ -11,6 +11,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <limits>
 #include "CVCTypes.h"
 #include "CVCBase.h"
